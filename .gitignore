@@ -1,12 +1,12 @@
+# ide
+.idea
+.vscode
+
 # dependencies
 /node_modules
 /.pnp
 .pnp.js
 .yarn/install-state.gz
-
-# ide
-.vscode
-.idea
 
 # testing
 /coverage
