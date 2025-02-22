@@ -1,6 +1,6 @@
 {
   "name": "nextjs-starter",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -33,6 +33,6 @@
   },
   "packageManager": "pnpm@9.15.2",
   "engines": {
-    "node": ">=23"
+    "node": ">=22"
   }
 }
