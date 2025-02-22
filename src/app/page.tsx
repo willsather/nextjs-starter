@@ -4,7 +4,7 @@ export default function Home() {
       <h1 className="my-8 font-bold">Next.js Starter</h1>
 
       <ul className="my-8 list-disc">
-        <li>Nextjs App Router</li>
+        <li>Next.js App Router</li>
         <li>Typescript</li>
         <li>Tailwind</li>
         <li>Biome</li>
