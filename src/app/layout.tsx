@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { VercelToolbar } from "@vercel/toolbar/next";
 
 import "./tailwind.css";
 
@@ -16,7 +19,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+      {children}
+
+      <Analytics />
+      <SpeedInsights />
+      {process.env.NODE_ENV === "development" && <VercelToolbar />}
+      </body>
     </html>
   );
 }
