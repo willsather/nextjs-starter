@@ -28,7 +28,7 @@
     "@types/react-dom": "^19.1.4",
     "@vercel/analytics": "^1.5.0",
     "@vercel/speed-insights": "^1.2.0",
-    "@vercel/toolbar": "^0.1.36",
+    "@vercel/toolbar": "^0.1.38",
     "@vitejs/plugin-react-swc": "^3.9.0",
     "jsdom": "^25.0.1",
     "postcss": "^8.5.3",
