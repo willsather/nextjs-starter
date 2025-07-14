@@ -1,4 +1,4 @@
-# Next.js Starter (App Router)
+# Next.js Starter
 
 ## Getting Started
 
