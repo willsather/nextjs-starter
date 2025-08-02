@@ -13,7 +13,7 @@
   "dependencies": {
     "flags": "^4.0.1",
     "next": "15.4.1",
-    "react": "19.1.0",
+    "react": "19.1.1",
     "react-dom": "19.1.0"
   },
   "devDependencies": {
@@ -24,7 +24,7 @@
     "@testing-library/user-event": "^14.6.1",
     "@types/jsdom": "^21.1.7",
     "@types/node": "^22.16.3",
-    "@types/react": "19.1.8",
+    "@types/react": "19.1.9",
     "@types/react-dom": "19.1.6",
     "@vercel/analytics": "^1.5.0",
     "@vercel/speed-insights": "^1.2.0",
@@ -42,7 +42,7 @@
   },
   "pnpm": {
     "overrides": {
-      "@types/react": "19.1.8",
+      "@types/react": "19.1.9",
       "@types/react-dom": "19.1.6"
     }
   }
