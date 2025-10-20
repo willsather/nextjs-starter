@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "test": "vitest run",
@@ -14,9 +14,9 @@
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "flags": "^4.0.1",
-    "next": "15.5.2",
-    "react": "19.1.0",
-    "react-dom": "19.1.0",
+    "next": "16.0.0-beta.0",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
     "tailwind-merge": "^3.3.1"
   },
   "devDependencies": {
@@ -27,8 +27,8 @@
     "@testing-library/user-event": "^14.6.1",
     "@types/jsdom": "^21.1.7",
     "@types/node": "^22.16.3",
-    "@types/react": "19.1.8",
-    "@types/react-dom": "19.1.6",
+    "@types/react": "19.2.2",
+    "@types/react-dom": "19.2.2",
     "@vercel/analytics": "^1.5.0",
     "@vercel/speed-insights": "^1.2.0",
     "@vercel/toolbar": "^0.1.38",
@@ -42,5 +42,11 @@
   "packageManager": "pnpm@10.7.0",
   "engines": {
     "node": ">=22"
+  },
+  "pnpm": {
+    "overrides": {
+      "@types/react": "19.2.2",
+      "@types/react-dom": "19.2.2"
+    }
   }
 }
