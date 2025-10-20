@@ -7,10 +7,8 @@ export default async function Home() {
   const showCTA = await showHeroCTA();
 
   return (
-    <main className="flex min-h-screen items-center justify-center overflow-hidden p-6">
-      <div className="absolute inset-0">
-        <div className="-z-10 absolute inset-0 h-full w-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] bg-white [background-size:16px_16px]" />
-      </div>
+    <main className="flex h-[100vh] min-h-screen w-full items-center justify-center overflow-hidden bg-white p-6">
+      <div className="absolute h-full w-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]" />
 
       <div className="relative z-20 mx-auto flex max-w-4xl flex-col items-center justify-center text-center">
         <div className="mb-10 flex items-center justify-center gap-6">
