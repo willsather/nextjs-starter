@@ -1,11 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Suspense } from "react";
 
 import { showHeroCTA } from "@/lib/flags";
 
 export default async function Home() {
-  const showCTA = await showHeroCTA();
-
   return (
     <main className="flex h-[100vh] min-h-screen w-full items-center justify-center overflow-hidden bg-white p-6">
       <div className="absolute h-full w-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]" />
@@ -49,17 +48,29 @@ export default async function Home() {
           .
         </p>
 
-        {showCTA ? (
-          <a href="https://github.com/willsather/nextjs-starter">
-            <button
-              type="button"
-              className="inline-flex h-10 items-center justify-center whitespace-nowrap rounded-md bg-black px-4 py-2 font-medium text-sm text-white ring-offset-background transition-colors hover:bg-black/75 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
-            >
-              Learn More
-            </button>
-          </a>
-        ) : null}
+        <Suspense fallback={null}>
+          <CTA />
+        </Suspense>
       </div>
     </main>
+  );
+}
+
+async function CTA() {
+  const showCTA = await showHeroCTA();
+
+  if (!showCTA) {
+    return null;
+  }
+
+  return (
+    <a href="https://github.com/willsather/nextjs-starter">
+      <button
+        type="button"
+        className="inline-flex h-10 items-center justify-center whitespace-nowrap rounded-md bg-black px-4 py-2 font-medium text-sm text-white ring-offset-background transition-colors hover:bg-black/75 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
+      >
+        Learn More
+      </button>
+    </a>
   );
 }
