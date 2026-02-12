@@ -1,9 +1,13 @@
 @import "tailwindcss";
 
-/*@theme {*/
-/*  --font-display: "Satoshi", "sans-serif";*/
-/*}*/
+@theme inline {
+  --font-sans: "Inter", "Inter Fallback", sans-serif;
+  --font-mono: "JetBrains Mono", "JetBrains Mono Fallback", monospace;
 
-h1 {
-  @apply text-4xl;
+  --color-background: #0a0a0a;
+  --color-foreground: #e5e5e5;
+  --color-muted: #a3a3a3;
+  --color-muted-foreground: #737373;
+  --color-border: #262626;
+  --color-accent: #d4d4d4;
 }

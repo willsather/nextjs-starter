@@ -1,76 +1,102 @@
-import Image from "next/image";
 import Link from "next/link";
-import { Suspense } from "react";
 
-import { showHeroCTA } from "@/lib/flags";
+import { ListItem } from "./_components/list-item";
+import { Logo } from "./_components/logo";
+import { SectionHeading } from "./_components/section-heading";
 
-export default async function Home() {
+export default function Home() {
   return (
-    <main className="flex h-[100vh] min-h-screen w-full items-center justify-center overflow-hidden bg-white p-6">
-      <div className="absolute h-full w-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]" />
-
-      <div className="relative z-20 mx-auto flex max-w-4xl flex-col items-center justify-center text-center">
-        <div className="mb-10 flex items-center justify-center gap-6">
-          <Image
-            src="/nextjs.svg"
-            alt="Next.js Logo"
-            width={100}
-            height={100}
-          />
+    <main className="mx-auto min-h-screen max-w-2xl px-6 py-16 md:py-24">
+      {/* Header */}
+      <header className="flex items-center gap-5">
+        <Logo />
+        <div>
+          <h1 className="font-sans text-4xl font-extrabold tracking-tight text-foreground">
+            will sather
+          </h1>
+          <p className="mt-1 font-mono text-sm text-muted-foreground">
+            * sleeping
+          </p>
         </div>
+      </header>
 
-        <h1 className="mb-4 font-extrabold text-gray-900">
-          Welcome to Next.js Starter
-        </h1>
+      {/* Bio */}
+      <p className="mt-10 font-mono text-base leading-relaxed text-muted">
+        software engineer. football watcher. star wars enjoyer.
+        <br />
+        divorced dad rock playlist curator. water drinker.
+      </p>
 
-        <p className="mb-8 text-gray-600 text-lg">
-          This starter is powered by{" "}
-          <Link className="font-bold underline" href="https://nextjs.org">
-            Next.js
-          </Link>
-          , the most popular React Framework, preconfigured with batteries
-          included tools like{" "}
-          <Link className="font-bold underline" href="https://tailwindcss.com">
-            Tailwind
-          </Link>
-          ,{" "}
-          <Link className="font-bold underline" href="https://ui.shadcn.com">
-            shadcn/ui
-          </Link>
-          ,{" "}
-          <Link className="font-bold underline" href="https://biomejs.dev">
-            Biome
-          </Link>
-          , and{" "}
-          <Link className="font-bold underline" href="https://vitest.dev">
-            Vitest
-          </Link>
-          .
-        </p>
+      {/* Work Section */}
+      <section className="mt-12" aria-labelledby="work-heading">
+        <SectionHeading
+          title="work"
+          badge={{
+            label: "@willsather",
+            href: "https://linkedin.com/in/willsather",
+            icon: "linkedin",
+          }}
+        />
+        <ul className="mt-4 flex flex-col gap-2">
+          <ListItem>field eng @ vercel</ListItem>
+          <ListItem>software eng @ vmware</ListItem>
+          <ListItem>intern @ dell</ListItem>
+          <ListItem>intern @ ivanti</ListItem>
+        </ul>
+      </section>
 
-        <Suspense fallback={null}>
-          <CTA />
-        </Suspense>
-      </div>
+      {/* Writing Section */}
+      <section className="mt-14" aria-labelledby="writing-heading">
+        <SectionHeading
+          title="writing"
+          badge={{
+            label: "@willsather",
+            href: "https://x.com/willsather",
+            icon: "x",
+          }}
+        />
+        <ul className="mt-4 flex flex-col gap-2">
+          <ListItem href="/blog/shiki-code-blocks">
+            Shiki Code Blocks with Turbopack
+          </ListItem>
+          <ListItem
+            href="https://vercel.com/blog/ai-powered-prototyping-with-design-systems"
+            external
+          >
+            AI-Powered Prototyping with Design Systems
+          </ListItem>
+          <ListItem href="/blog/50-under-25">50 under 25</ListItem>
+        </ul>
+        <Link
+          href="/blog"
+          className="mt-4 inline-block font-mono text-sm text-muted-foreground transition-colors hover:text-foreground"
+        >
+          {"archive \u2192"}
+        </Link>
+      </section>
+
+      {/* Code Section */}
+      <section className="mt-14" aria-labelledby="code-heading">
+        <SectionHeading
+          title="code"
+          badge={{
+            label: "@willsather",
+            href: "https://github.com/willsather",
+            icon: "github",
+          }}
+        />
+        <ul className="mt-4 flex flex-col gap-2">
+          <ListItem href="https://github.com/willsather/create-ws-starter" external>
+            pnpm create ws-starter
+          </ListItem>
+          <ListItem href="https://github.com/willsather/registry-starter" external>
+            registry starter
+          </ListItem>
+          <ListItem href="https://github.com/willsather/agent-starter" external>
+            agent starter
+          </ListItem>
+        </ul>
+      </section>
     </main>
-  );
-}
-
-async function CTA() {
-  const showCTA = await showHeroCTA();
-
-  if (!showCTA) {
-    return null;
-  }
-
-  return (
-    <a href="https://github.com/willsather/nextjs-starter">
-      <button
-        type="button"
-        className="inline-flex h-10 items-center justify-center whitespace-nowrap rounded-md bg-black px-4 py-2 font-medium text-sm text-white ring-offset-background transition-colors hover:bg-black/75 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
-      >
-        Learn More
-      </button>
-    </a>
   );
 }
