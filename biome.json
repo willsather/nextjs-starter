@@ -1,5 +1,5 @@
 {
-  "$schema": "https://biomejs.dev/schemas/2.5.10/schema.json",
+  "$schema": "https://biomejs.dev/schemas/2.6.3/schema.json",
   "assist": {
     "actions": {
       "source": {
@@ -40,12 +40,13 @@
     "rules": {
       "preset": "recommended",
       "nursery": {
-        "useSortedClasses": "warn"
+        "useTailwindSortedClasses": "warn"
       }
     }
   },
   "formatter": {
     "enabled": true,
+    "includes": ["**", "!**/pnpm-lock.yaml"],
     "indentStyle": "space",
     "indentWidth": 2
   },

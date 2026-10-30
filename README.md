@@ -3,6 +3,7 @@
 ## Getting Started
 
 ### Development mode
+
 ```bash
 pnpm install
 pnpm run dev

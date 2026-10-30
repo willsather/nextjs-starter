@@ -8,12 +8,15 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 26
+
       - uses: pnpm/action-setup@v3
         with:
-          version: 9
           run_install: |
             - recursive: true
-              args: [--frozen-lockfile, --strict-peer-dependencies]
+              args: [--frozen-lockfile, --config.strictPeerDependencies=true]
 
       - name: Build
         id: build

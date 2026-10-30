@@ -8,25 +8,25 @@ import { CopyCommand } from "./copy-command";
 export default function Home() {
   return (
     <main className="relative flex min-h-screen items-center justify-center bg-black px-6 py-20 text-neutral-100">
-      <span className="absolute top-6 left-6 font-mono text-neutral-500 text-xs">
+      <span className="absolute top-6 left-6 font-mono text-xs text-neutral-500">
         nextjs-starter
       </span>
 
       <div className="w-full max-w-2xl text-center">
-        <h1 className="font-bold text-4xl text-white tracking-tight sm:text-5xl">
+        <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">
           Start building.
         </h1>
-        <p className="mx-auto mt-5 max-w-md font-mono text-neutral-500 text-sm leading-relaxed">
+        <p className="mx-auto mt-5 max-w-md font-mono text-sm leading-relaxed text-neutral-500">
           a starter for next.js app router, as i’m tired of configuring all of
           this.
         </p>
 
-        <code className="mt-10 inline-flex items-center gap-3 rounded-full border border-neutral-800 bg-neutral-950 py-3.5 pr-4 pl-5 font-mono text-neutral-300 text-sm">
+        <code className="mt-10 inline-flex items-center gap-3 rounded-full border border-neutral-800 bg-neutral-950 py-3.5 pr-4 pl-5 font-mono text-sm text-neutral-300">
           pnpm create ws-starter
           <CopyCommand />
         </code>
 
-        <footer className="mt-8 flex items-center justify-center gap-5 font-mono text-neutral-600 text-xs">
+        <footer className="mt-8 flex items-center justify-center gap-5 font-mono text-xs text-neutral-600">
           <Link
             href="https://nextjs.org/docs"
             className="transition-colors hover:text-white"
