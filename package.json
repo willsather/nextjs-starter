@@ -14,9 +14,9 @@
     "class-variance-authority": "0.7.1",
     "clsx": "2.1.1",
     "flags": "4.3.0",
-    "next": "16.3.3",
-    "react": "19.2.8",
-    "react-dom": "19.2.8",
+    "next": "16.4.3",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
     "tailwind-merge": "3.6.0"
   },
   "devDependencies": {
@@ -27,8 +27,8 @@
     "@testing-library/user-event": "14.6.6",
     "@types/jsdom": "30.0.0",
     "@types/node": "26.3.0",
-    "@types/react": "19.2.18",
-    "@types/react-dom": "19.2.5",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
     "@vercel/analytics": "2.0.1",
     "@vercel/speed-insights": "2.0.0",
     "@vercel/toolbar": "0.2.7",
@@ -38,6 +38,9 @@
     "tailwindcss": "4.3.3",
     "typescript": "7.0.2",
     "vitest": "4.1.11"
+  },
+  "engines": {
+    "node": "26.x"
   },
   "packageManager": "pnpm@10.34.5"
 }
